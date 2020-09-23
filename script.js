@@ -30,18 +30,18 @@ $(document).ready(function () {
 
 
     function getData(city) {
-        let queryURL = "http://api.openweathermap.org/data/2.5/forecast?q=" + city + "&APPID=" + apiKey;
+        let queryURL = "https://api.openweathermap.org/data/2.5/forecast?q=" + city + "&APPID=" + apiKey;
         $.ajax({ // ajax call to get most of the data
             url: queryURL,
             method: "GET"
         }).then(function (res) {
             let lat = res.city.coord.lat;
             let lon = res.city.coord.lon;
-            let queryURL2 = "http://api.openweathermap.org/data/2.5/uvi?lat=" + lat + "&lon=" + lon + "&appid=" + apiKey;
+            let queryURL2 = "https://api.openweathermap.org/data/2.5/uvi?lat=" + lat + "&lon=" + lon + "&appid=" + apiKey;
 
             console.log(res)
             $("#cityName").html(res.city.name + " (" +  moment().format('MMMM Do YYYY') + ")");
-            $("#weather").attr("src", "http://openweathermap.org/img/wn/" + res.list[0].weather[0].icon + "@2x.png");
+            $("#weather").attr("src", "https://openweathermap.org/img/wn/" + res.list[0].weather[0].icon + "@2x.png");
             $("#temp").text("Temperature: " + ((res.list[0].main.temp - 273.15) * (9 / 5) + 32).toFixed(2) + "F");
             $("#humidity").text("Humidity: " + res.list[0].main.humidity + "%");
             $("#windSpeed").text("Wind speed: " + res.list[0].wind.speed + "MPH")
@@ -114,11 +114,11 @@ $(document).ready(function () {
         $("#forcastDate3").text(moment().add(3, 'days').format('MMMM Do YYYY'));
         $("#forcastDate4").text(moment().add(4, 'days').format('MMMM Do YYYY'));
         $("#forcastDate5").text(moment().add(5, 'days').format('MMMM Do YYYY'));
-        $("#forcastWeather1").attr("src", "http://openweathermap.org/img/wn/" + res.list[1].weather[0].icon + "@2x.png");
-        $("#forcastWeather2").attr("src", "http://openweathermap.org/img/wn/" + res.list[2].weather[0].icon + "@2x.png");
-        $("#forcastWeather3").attr("src", "http://openweathermap.org/img/wn/" + res.list[3].weather[0].icon + "@2x.png");
-        $("#forcastWeather4").attr("src", "http://openweathermap.org/img/wn/" + res.list[4].weather[0].icon + "@2x.png");
-        $("#forcastWeather5").attr("src", "http://openweathermap.org/img/wn/" + res.list[5].weather[0].icon + "@2x.png");
+        $("#forcastWeather1").attr("src", "https://openweathermap.org/img/wn/" + res.list[1].weather[0].icon + "@2x.png");
+        $("#forcastWeather2").attr("src", "https://openweathermap.org/img/wn/" + res.list[2].weather[0].icon + "@2x.png");
+        $("#forcastWeather3").attr("src", "https://openweathermap.org/img/wn/" + res.list[3].weather[0].icon + "@2x.png");
+        $("#forcastWeather4").attr("src", "https://openweathermap.org/img/wn/" + res.list[4].weather[0].icon + "@2x.png");
+        $("#forcastWeather5").attr("src", "https://openweathermap.org/img/wn/" + res.list[5].weather[0].icon + "@2x.png");
         $("#forcastTemp1").text("Temp: " + ((res.list[1].main.temp - 273.15) * (9 / 5) + 32).toFixed(2) + "F");
         $("#forcastTemp2").text("Temp: " + ((res.list[2].main.temp - 273.15) * (9 / 5) + 32).toFixed(2) + "F");
         $("#forcastTemp3").text("Temp: " + ((res.list[3].main.temp - 273.15) * (9 / 5) + 32).toFixed(2) + "F");
