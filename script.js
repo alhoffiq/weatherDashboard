@@ -19,7 +19,6 @@ $(document).ready(function () {
         let cityInput = $("#searchInput").val(); // Grabs the text in the search bar
         getData(cityInput); // And uses it as the city input
         setHistory(cityInput);
-        console.log(historyFlag)
     });
 
     $(".btn-block").on("click", function () { // When history button is clicked:
@@ -41,7 +40,7 @@ $(document).ready(function () {
             let queryURL2 = "http://api.openweathermap.org/data/2.5/uvi?lat=" + lat + "&lon=" + lon + "&appid=" + apiKey;
 
             console.log(res)
-            $("#cityName").text(res.city.name);
+            $("#cityName").text(res.city.name + " (" +  moment().format('MMMM Do YYYY') + ")");
             $("#temp").text("Temperature: " + ((res.list[0].main.temp - 273.15) * (9 / 5) + 32).toFixed(2) + "F");
             $("#humidity").text("Humidity: " + res.list[0].main.humidity + "%");
             $("#windSpeed").text("Wind speed: " + res.list[0].wind.speed + "MPH")
@@ -73,7 +72,7 @@ $(document).ready(function () {
             localStorage.setItem("History3", city)
             localStorage.setItem("historyFlag", historyFlag)
         }
-        else if (historyFlag == 3) {
+        else if (historyFlag > 2) {
             historyFlag = 0
             $("#lastInput4").text(city);
             localStorage.setItem("History4", city)
