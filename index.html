@@ -23,7 +23,7 @@
         <div class="form-row">
             <div class="col-md-2" id="searchBox">
                 <h4>City Search:</h4>
-                <input type="text" class="form-control" placeholder="Search..." id="searchInput">
+                <input type="text" class="form-control" placeholder="City" id="searchInput">
                 <button type="button" class="btn btn-primary" id="searchBtn">Search</button>
                 <button type="button" class="btn btn-light btn-lg btn-block" id="lastInput1"></button>
                 <button type="button" class="btn btn-light btn-lg btn-block" id="lastInput2"></button>
@@ -34,6 +34,7 @@
                 <div class="row">
                     <div class="col" id="results">
                         <h2 id="cityName">-</h2>
+                        <img alt="weather icon" id="weather">
                         <p id="temp">-</p>
                         <p id="humidity">-</p>
                         <p id="windSpeed">-</p>
@@ -43,51 +44,51 @@
                 <div class="row justify-content-center">
                     <div class="col-sm-2">
                         <div class="card text-white bg-primary mb-3" style="max-width: 18rem;">
-                            <div class="card-header">09/22/2020</div>
+                            <div class="card-header" id="forcastDate1"></div>
                             <div class="card-body">
-                                <p class="card-title">&#x2600;</p>
-                                <p class="card-text">temp: 100</p>
-                                <p class="card-text" id="forcastHumidity">humidity: 80%</p>
+                                <img id="forcastWeather1">
+                                <p class="card-text" id="forcastTemp1"></p>
+                                <p class="card-text" id="forcastHumidity1"></p>
                             </div>
                         </div>
                     </div>
                     <div class="col-sm-2">
                         <div class="card text-white bg-primary mb-3" style="max-width: 18rem;">
-                            <div class="card-header">09/22/2020</div>
+                            <div class="card-header" id="forcastDate2"></div>
                             <div class="card-body">
-                                <p class="card-title">&#x2600;</p>
-                                <p class="card-text">temp: 100</p>
-                                <p class="card-text" id="forcastHumidity">humidity: 80%</p>
+                                <img id="forcastWeather2">
+                                <p class="card-text" id="forcastTemp2"></p>
+                                <p class="card-text" id="forcastHumidity2"></p>
                             </div>
                         </div>
                     </div>
                     <div class="col-sm-2">
                         <div class="card text-white bg-primary mb-3" style="max-width: 18rem;">
-                            <div class="card-header">09/22/2020</div>
+                            <div class="card-header" id="forcastDate3"></div>
                             <div class="card-body">
-                                <p class="card-title">&#x2600;</p>
-                                <p class="card-text">temp: 100</p>
-                                <p class="card-text" id="forcastHumidity">humidity: 80%</p>
+                                <img id="forcastWeather3">
+                                <p class="card-text" id="forcastTemp3"></p>
+                                <p class="card-text" id="forcastHumidity3"></p>
                             </div>
                         </div>
                     </div>
                     <div class="col-sm-2">
                         <div class="card text-white bg-primary mb-3" style="max-width: 18rem;">
-                            <div class="card-header">09/22/2020</div>
+                            <div class="card-header" id="forcastDate4"></div>
                             <div class="card-body">
-                                <p class="card-title">&#x2600;</p>
-                                <p class="card-text">temp: 100</p>
-                                <p class="card-text" id="forcastHumidity">humidity: 80%</p>
+                                <img id="forcastWeather4">
+                                <p class="card-text" id="forcastTemp4"></p>
+                                <p class="card-text" id="forcastHumidity4"></p>
                             </div>
                         </div>
                     </div>
                     <div class="col-sm-2">
                         <div class="card text-white bg-primary mb-3" style="max-width: 18rem;">
-                            <div class="card-header">09/22/2020</div>
+                            <div class="card-header" id="forcastDate5"></div>
                             <div class="card-body">
-                                <p class="card-title">&#x2600;</p>
-                                <p class="card-text">temp: 100</p>
-                                <p class="card-text" id="forcastHumidity">humidity: 80%</p>
+                                <img id="forcastWeather5">
+                                <p class="card-text" id="forcastTemp5"></p>
+                                <p class="card-text" id="forcastHumidity5"></p>
                             </div>
                         </div>
                     </div>
