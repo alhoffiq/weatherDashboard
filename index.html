@@ -23,21 +23,21 @@
         <div class="form-row">
             <div class="col-md-2" id="searchBox">
                 <h4>City Search:</h4>
-                <input type="text" class="form-control" placeholder="Search...">
+                <input type="text" class="form-control" placeholder="Search..." id="searchInput">
                 <button type="button" class="btn btn-primary" id="searchBtn">Search</button>
-                <button type="button" class="btn btn-light btn-lg btn-block" id="lastInput1">Phoeonix</button>
-                <button type="button" class="btn btn-light btn-lg btn-block" id="lastInput2">Los Angeles</button>
-                <button type="button" class="btn btn-light btn-lg btn-block" id="lastInput3">New York</button>
-                <button type="button" class="btn btn-light btn-lg btn-block" id="lastInput4">Denver</button>
+                <button type="button" class="btn btn-light btn-lg btn-block" id="lastInput1"></button>
+                <button type="button" class="btn btn-light btn-lg btn-block" id="lastInput2"></button>
+                <button type="button" class="btn btn-light btn-lg btn-block" id="lastInput3"></button>
+                <button type="button" class="btn btn-light btn-lg btn-block" id="lastInput4"></button>
             </div>
             <div class="col-md-10">
                 <div class="row">
-                    <div class="col">
-                        <h2 id="cityName">name</h2>
-                        <p id="temp">temp</p>
-                        <p id="humidity">humidity</p>
-                        <p id="windSpeed">windspeed</p>
-                        <p id="uvIndex">uvindex</p>
+                    <div class="col" id="results">
+                        <h2 id="cityName">-</h2>
+                        <p id="temp">-</p>
+                        <p id="humidity">-</p>
+                        <p id="windSpeed">-</p>
+                        <p id="uvIndex">-</p>
                     </div>
                 </div>
                 <div class="row justify-content-center">
@@ -47,7 +47,7 @@
                             <div class="card-body">
                                 <p class="card-title">&#x2600;</p>
                                 <p class="card-text">temp: 100</p>
-                                <p class="card-text" id="smallHumidity">humidity: 80%</p>
+                                <p class="card-text" id="forcastHumidity">humidity: 80%</p>
                             </div>
                         </div>
                     </div>
@@ -57,7 +57,7 @@
                             <div class="card-body">
                                 <p class="card-title">&#x2600;</p>
                                 <p class="card-text">temp: 100</p>
-                                <p class="card-text" id="smallHumidity">humidity: 80%</p>
+                                <p class="card-text" id="forcastHumidity">humidity: 80%</p>
                             </div>
                         </div>
                     </div>
@@ -67,7 +67,7 @@
                             <div class="card-body">
                                 <p class="card-title">&#x2600;</p>
                                 <p class="card-text">temp: 100</p>
-                                <p class="card-text" id="smallHumidity">humidity: 80%</p>
+                                <p class="card-text" id="forcastHumidity">humidity: 80%</p>
                             </div>
                         </div>
                     </div>
@@ -77,7 +77,7 @@
                             <div class="card-body">
                                 <p class="card-title">&#x2600;</p>
                                 <p class="card-text">temp: 100</p>
-                                <p class="card-text" id="smallHumidity">humidity: 80%</p>
+                                <p class="card-text" id="forcastHumidity">humidity: 80%</p>
                             </div>
                         </div>
                     </div>
@@ -87,7 +87,7 @@
                             <div class="card-body">
                                 <p class="card-title">&#x2600;</p>
                                 <p class="card-text">temp: 100</p>
-                                <p class="card-text" id="smallHumidity">humidity: 80%</p>
+                                <p class="card-text" id="forcastHumidity">humidity: 80%</p>
                             </div>
                         </div>
                     </div>
