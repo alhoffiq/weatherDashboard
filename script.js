@@ -50,6 +50,7 @@ $(document).ready(function () {
                 method: "GET"
             }).then(function (res2) {
                 $("#uvIndex").text("UV Index: " + res2.value);
+                colorIndex(res2.value); // Colors the index value
             });
             getForcast(res); // Sets forcast display
         });
@@ -128,5 +129,23 @@ $(document).ready(function () {
         $("#forcastHumidity3").text("Humidity: " + res.list[3].main.humidity + "%");
         $("#forcastHumidity4").text("Humidity: " + res.list[4].main.humidity + "%");
         $("#forcastHumidity5").text("Humidity: " + res.list[5].main.humidity + "%");
+    }
+
+    function colorIndex(index) { // Colors the index value to show severity
+        if (index > 0 && index <= 2) { // Green
+            $("#uvIndex").css("color", "green")
+        }
+        else if (index > 2 && index <= 5) { // Yellow
+            $("#uvIndex").css("color", "yellow")
+        }
+        else if (index > 5 && index <= 7) { // Gold
+            $("#uvIndex").css("color", "Gold")
+        }
+        else if (index > 7 && index <= 10) { // Red
+            $("#uvIndex").css("color", "Red")
+        }
+        else if (index > 10) { // Pink
+            $("#uvIndex").css("color", "darkmagenta")
+        }
     }
 });
