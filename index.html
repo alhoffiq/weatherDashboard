@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
         integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css" type="text/css">
 
     <title>Weather Dashboard</title>
 
@@ -14,9 +15,28 @@
 
 <body>
 
+    <nav class="navbar navbar-dark bg-dark">
+        <span class="navbar-brand mb-0 h1 mx-auto">Weather Dashboard</span>
+    </nav>
+
+    <div class="container">
+        <div class="form-row">
+            <div class="col-md-4" id="searchBox">
+                <h4>Search for a city:</h4>
+                <input type="text" class="form-control" placeholder="Search...">
+                <button type="button" class="btn btn-light btn-lg btn-block" id="lastInput1">Phoeonix</button>
+                <button type="button" class="btn btn-light btn-lg btn-block" id="lastInput2">Los Angeles</button>
+                <button type="button" class="btn btn-light btn-lg btn-block" id="lastInput3">New York</button>
+            </div>
+            <div class="col-md-8">
+
+            </div>
+        </div>
+    </div>
 
 
-    
+
+
 
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
         integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
