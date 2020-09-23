@@ -3,10 +3,14 @@
 }
 
 #searchBox {
-    background-color: lightgray
+    background-color: lightgray;
 }
 
 .btn {
     margin-top: 15px;
     margin-bottom: 15px;
+}
+
+#smallHumidity {
+    font-size: small;
 }
